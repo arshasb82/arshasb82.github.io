@@ -1,196 +1,176 @@
 body {
-    direction: ltr;
-    font-size: 14px;
-    text-align: left;
-    color: #303030;
+    direction: rtl;
+    font-size: 16px;
+    text-align: right;
+    color: #202020;
     line-height: 30px;
-    font-family: 'iransans';
+    font-family: 'iransans', sans-serif;
+    background-color: #fefefe;
 }
+
 .container {
     display: flex;
     justify-content: flex-start;
     gap: 10px;
 }
 
-.link-button1 {
+/* دکمه‌ها با کنتراست بهتر */
+.link-button1,
+.link-button11 {
     text-decoration: none;
     padding: 10px 20px;
-    background-color: #6dca65;/*سبز*/
-    color: white;
+    background-color: #007B00; /* سبز تیره‌تر */
+    color: #ffffff;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
-.link-button2 {
+.link-button2,
+.link-button12 {
     text-decoration: none;
     padding: 10px 20px;
-    margin-left: 30px;
-    background-color: #5cca9c; /*آبی*/
-    color: white;
+    margin-right: 30px;
+    background-color: #006687; /* آبی تیره‌تر */
+    color: #ffffff;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
-.link-button1:hover {
-    background-color: #0056b3;
+/* حالت hover و focus برای دسترس‌پذیری بیشتر */
+.link-button1:hover,
+.link-button1:focus,
+.link-button11:hover,
+.link-button11:focus {
+    background-color: #004080;
 }
 
-.link-button2:hover {
-    background-color: #1e7e34;
+.link-button2:hover,
+.link-button2:focus,
+.link-button12:hover,
+.link-button12:focus {
+    background-color: #003950;
 }
-.top-menu {
+
+/* منو بالا */
+.top-menu,
+.top-menu1 {
     width: 100%;
     background: #fafcfd;
 }
-.top-menu li {
-    float: left;
-    list-style: none;
-}
-.top-menu li i {
-    font-size: 18px;
-    padding: 10px 80px;
+
+.top-menu li,
+.top-menu1 li {
+    float: right;
     list-style: none;
 }
 
-/*********شروع استایل های هدر*********/
+.top-menu li i,
+.top-menu1 li i {
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+/* هدر */
 .header {
     width: 100%;
-    float: right;
+    display: flex;
     background: #fff;
     height: 150px;
+    align-items: center;
+    justify-content: space-between;
 }
-.header-right{
-    width: 50%;
-    float: right;
-    padding: 0px 0;
-    background-color: #68d2ec;
-    height:200px;
-}
-.header-right p{
-    text-align: center;
-    font-size: 50px;
-    height: 50px;
-}
-.header-left{
-    float: left;
-    padding: 0px 0;
-    height:200px;
-} 
 
-.header-left img{
+.header-right {
+    width: 50%;
+    background-color: #68d2ec;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-right p {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.header-left img {
     max-width: 100%;
-    width: 450px; 
-    height:500px; 
-  }
-  .right{
+    width: 350px;
+    height: auto;
+}
+
+/* اطلاعات کاربر */
+.right {
     width: 50%;
     float: right;
     margin: 150px -10px;
     background-color: #129e68;
-    height:1200px;
-}
-.right p{
-    text-align: center;
-    font-size: 50px;
-    height: 50px;
-}
-.left1{
-    width: 40%;
-    float:left;
-    margin: 400px -10px;
-    background-color: #e5f31a;
-    height:150px;
-}
-.left2{
-    width: 40%;
-    float:left;
-    margin: -290px -10px;
-    background-color: #9221a1;
-    height:680px;
-}
-.left1 p{
-    text-align: center;
-    font-size: 50px;
-    height: 50px;
-}
-.left2 p{
-    text-align: center;
-    font-size: 50px;
-    height: 50px;
-}
-/*********شروع استایل های projects**/
-.top-menu1 {
-    width: 100%;
-    background: #7c7e80;
-}
-.top-menu1 li {
-    float: left;
-    list-style: none;
-}
-.top-menu1 li i {
-    font-size: 18px;
-    padding: 10px 80px;
-    list-style: none;
-}
-.link-button11 {
-    text-decoration: none;
-    padding: 10px 20px;
-    background-color: #868d85;/*سبز*/
     color: white;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.link-button12 {
-    text-decoration: none;
-    padding: 10px 20px;
-    margin-left: 30px;
-    background-color: #566861; /*آبی*/
-    color: white;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-
-.center{
-    width: 90%;
-    float: right;
-    margin: 10px 35px;
-    background-color: #17bdff;
-    height:800px;
-}
-.center h1{
-    font-size: 50px;
-    height: 50px;
-}
-.center h2{
-    font-size: 30px;
-    height: 50px;
-}
-.project_link{
-    margin: 200px 0px;
-}
-
-
-/******                  شروع استایل های hubbies         *****/
-.image img {
-    width: 400px; /* اندازه تصویر */
     height: auto;
-    border-radius: 50%; /* گرد کردن گوشه‌ها */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.left1, .left2 {
+    width: 40%;
     float: left;
-    margin-top: 100px;
+    margin: 40px 10px;
+    height: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.left1 {
+    background-color: #e5f31a;
+}
+
+.left2 {
+    background-color: #9221a1;
+    color: white;
+}
+
+/* صفحه پروژه‌ها */
+.center {
+    width: 90%;
+    margin: 20px auto;
+    background-color: #17bdff;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.center h1 {
+    font-size: 36px;
+}
+
+.center h2 a {
+    font-size: 24px;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* علایق */
+.image img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin: 30px;
+    float: right;
 }
 
 .text {
-    margin-left: 550px;
-    font-size: 25px;
-    float: right; /* فاصله بین متن و تصویر */
-}.parent-container {
-    display: flex;
-    justify-content:center;
-    flex-direction: column ;
+    margin-right: 350px;
+    font-size: 20px;
+    line-height: 32px;
 }
 
-p{
-    padding: 30px;
+.parent-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+p {
+    padding: 10px;
 }
